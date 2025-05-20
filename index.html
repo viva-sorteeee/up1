@@ -902,6 +902,14 @@
   document.body.innerHTML = document.body.innerHTML.replace(/>\s+</g, '><');
 </script>
 
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (window.location.search) {
+      const urlLimpa = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, urlLimpa);
+    }
+  });
+</script>
 
 
 </body></html>
